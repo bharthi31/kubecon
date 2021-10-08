@@ -7,7 +7,7 @@ metadata:
     ingress.citrix.com/frontend-ip: "10.0.32.9"
 spec:
   rules:
-  - host: "citrix-demo.com"
+  - host: "demo.ocp-citrix.cloudpst.net"
     http:
       paths:
       - backend:
