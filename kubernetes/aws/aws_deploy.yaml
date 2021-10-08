@@ -4,11 +4,11 @@ metadata:
   name: demo-app
   annotations:
     kubernetes.io/ingress.class: "aws"
-    ingress.citrix.com/frontend-ip: "10.0.32.9"
+    ingress.citrix.com/frontend-ip: "10.0.5.250"
 
 spec:
   rules:
-  - host: "citrix-demo.com"
+  - host: "demo.ocp-citrix.cloudpst.net"
     http:
       paths:
       - backend:
