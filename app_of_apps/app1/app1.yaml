@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app1
+  name: cic1
 spec:
   destination:
     name: ''
@@ -15,3 +15,7 @@ spec:
       valueFiles:
         - values.yaml
   project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
