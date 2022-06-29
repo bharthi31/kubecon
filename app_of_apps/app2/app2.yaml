@@ -2,11 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: cic2
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    name: ''
-    namespace: default
-    server: 'https://kubernetes.default.svc'
+    namespace: cic1
+    name: in-cluster
+  project: cic-apps
   source:
     path: cic/charts/citrix-ingress-controller-2
     repoURL: 'https://github.com/priyankash-citrix/helm.git'
@@ -14,8 +17,3 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-  project: default
-  syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
