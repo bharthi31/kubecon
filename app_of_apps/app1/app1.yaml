@@ -8,7 +8,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: cic/charts/citrix-ingress-controller-2
+    path: cic/charts/citrix-ingress-controller-1
     repoURL: 'https://github.com/priyankash-citrix/helm.git'
     targetRevision: HEAD
     helm:
