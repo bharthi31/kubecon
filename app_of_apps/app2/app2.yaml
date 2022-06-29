@@ -8,7 +8,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: azure/
+    path: kubernetes/azure/
     repoURL: 'https://github.com/bharthi31/kubecon.git'
     targetRevision: HEAD
   project: default
