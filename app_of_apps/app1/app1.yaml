@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app1
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: aws/
+    repoURL: 'https://github.com/bharthi31/kubecon.git'
+    targetRevision: HEAD
+  project: default
