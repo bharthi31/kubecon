@@ -11,4 +11,6 @@ spec:
     path: kubernetes/aws/
     repoURL: 'https://github.com/bharthi31/kubecon.git'
     targetRevision: HEAD
+    directory:
+      recurse: true
   project: default
