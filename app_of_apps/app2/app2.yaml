@@ -1,14 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app2
+  name: cic2
 spec:
   destination:
     name: ''
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: kubernetes/azure/
-    repoURL: 'https://github.com/bharthi31/kubecon.git'
+    path: cic/charts/citrix-ingress-controller-2
+    repoURL: 'https://github.com/priyankash-citrix/helm.git'
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
   project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
